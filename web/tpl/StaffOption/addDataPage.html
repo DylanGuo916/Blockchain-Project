@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="cn">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap Min CSS -->
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <!-- Animate Min CSS -->
+    <link rel="stylesheet" href="../../assets/css/animate.min.css">
+    <!-- FontAwesome Min CSS -->
+    <link rel="stylesheet" href="../../assets/css/fontawesome.min.css">
+    <!-- FlatIcon CSS -->
+    <link rel="stylesheet" href="../../assets/css/flaticon.css">
+    <!-- Popup CSS -->
+    <link rel="stylesheet" href="../../assets/css/magnific-popup.min.css">
+    <!-- Owl Carousel Min CSS -->
+    <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
+    <!-- Image LightBox Min CSS -->
+    <link rel="stylesheet" href="../../assets/css/imagelightbox.min.css">
+    <!-- Nice Select Min CSS -->
+    <link rel="stylesheet" href="../../assets/css/nice-select.min.css">
+    <!-- MeanMenu CSS -->
+    <link rel="stylesheet" href="../../assets/css/meanmenu.css">
+    <!-- Odometer CSS -->
+    <link rel="stylesheet" href="../../assets/css/odometer.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <title>Rank</title>
+
+    <link rel="icon" type="image/png" href="../../assets/image/favicon.ico">
+</head>
+<script>
+    function processFiles(files) {
+        var file = files[0];
+
+        var message = document.getElementById("message");
+        message.innerHTML = "文件名：" + file.name + "<br>";
+        message.innerHTML += "文件大小：" + file.size + "字节<br>";
+        message.innerHTML += "文件类型：" + file.type + "<br>";
+
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            // 这个事件发生，意为着数据准备好了
+            // 把它复制到页面的<div>元素中
+            var output = document.getElementById("fileOutput");
+            output.textContent = e.target.result;
+        };
+        reader.readAsText(file);
+    }
+</script>
+</head>
+
+<body>
+<!-- Start Preloader Area -->
+<div class="preloader">
+    <div class="lds-ripple">
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<!-- End Preloader Area -->
+
+<!-- Start Navbar Area -->
+<div class="navbar-area">
+    <div class="trifles-responsive-nav">
+        <div class="container">
+            <div class="trifles-responsive-menu">
+                <div class="logo">
+                    <a href="/backToHome">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="trifles-nav">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <a class="navbar-brand" href="/backToHome">
+                </a>
+
+                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="/backToHome" class="nav-link">
+                                首页
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/backToHome" class="nav-link">
+                                文件下载
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/contact" class="nav-link">
+                                联系我们
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- End Navbar Area -->
+
+<!-- Start Page Title Area -->
+
+<!-- End Page Title Area -->
+
+
+<!-- Start Shop Section -->
+<section class="shop-section pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span>Rank</span>
+            <h3>上链操作</h3>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-12 col-md-12">
+                <div class="tab products-details-tab">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="tab_content">
+                                <div class="tabs_item">
+                                    <div class="container">
+
+                                        <form id="BulkForm" action="/addData" method="post" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="billing-details">
+                                                        <h3 class="title"></h3>
+                                                        <h4 class="title">请输入信息</h4>
+                                                        <div class="row">
+
+                                                            <div class="col-lg-12 col-md-12">
+
+                                                            </div>
+
+                                                            <div class="col-lg-12 col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>编号
+                                                                        <span class="required">*</span>
+                                                                    </label>
+                                                                    <input name="id" type="text"
+                                                                           class="form-control">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6 col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>企业名称
+                                                                        <span class="required">*</span>
+                                                                    </label>
+                                                                    <input name="name" type="text"
+                                                                           class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>法人
+                                                                        <span class="required">*</span>
+                                                                    </label>
+                                                                    <input name="legal" type="text"
+                                                                           class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12 col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>时间
+                                                                        <span class="required">*</span>
+                                                                    </label>
+                                                                    <div class="form-group">
+                                                                        <input id="date" name="date"
+                                                                               value="" type="text"
+                                                                               class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12 col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>得分
+                                                                        <span class="required">*</span>
+                                                                    </label>
+                                                                    <div class="form-group">
+                                                                        <input id="score" name="score"
+                                                                               value="" type="text"
+                                                                               class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12 col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>等级
+                                                                        <span class="required">*</span>
+                                                                    </label>
+                                                                    <div class="form-group">
+                                                                        <input id="rank" name="rank"
+                                                                               value="" type="text"
+                                                                               class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="order-details col-lg-12 col-md-12">
+                                                                <div class="payment-box">
+                                                                    <h5 class="text-center">请确认已正确填写！</h5>
+                                                                    <a type="button" class="default-btn order-btn col-lg-12 col-md-12" onclick="BulkForm.submit();">
+                                                                        提交
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-12">
+
+
+                                                    <div class="order-details">
+                                                        <div class="payment-box">
+                                                            <div class="payment-method">
+                                                                <div id='container' style="width:100%;height: 400px"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="order-details">
+                                                        <div class="payment-box">
+                                                            <div class="payment-method">
+                                                                <p>
+                                                                <h5>注意！</h5>
+                                                                {{.Sess.UserName}}，定位已确定
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- End Shop Section -->
+
+
+<!-- Start Product Details Area -->
+<section class="product-details-area ptb-100">
+    <div class="container">
+
+    </div>
+</section>
+<!-- End Product Details Area -->
+<!-- Start Footer Section -->
+<!-- End Footer Section -->
+
+
+<!-- Start Go Top Section -->
+<div class="go-top">
+    <i class="fas fa-chevron-up"></i>
+    <i class="fas fa-chevron-up"></i>
+</div>
+<!-- End Go Top Section -->
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=9a4a1faf5738c2580fe335441055dcaf"></script>
+<script type="text/javascript" src="https://a.amap.com/jsapi_demos/static/demo-center/js/jquery-1.11.1.min.js" ></script>
+<script type="text/javascript" src="https://a.amap.com/jsapi_demos/static/demo-center/js/underscore-min.js" ></script>
+<script type="text/javascript" src="https://a.amap.com/jsapi_demos/static/demo-center/js/backbone-min.js" ></script>
+<script type="text/javascript" src='https://a.amap.com/jsapi_demos/static/demo-center/js/prety-json.js'></script>
+<script>
+    //初始化地图
+    var map = new AMap.Map('container', {
+        resizeEnable: true, //是否监控地图容器尺寸变化
+        zoom: 11, //初始地图级别
+    });
+
+    //获取并展示当前城市信息
+    function logMapinfo(){
+        map.getCity( function(info){
+            document.getElementById("location").value=info.city+info.district;
+        });
+    }
+
+    logMapinfo();
+
+
+
+    AMap.plugin('AMap.Geolocation', function() {
+        var geolocation = new AMap.Geolocation({
+            enableHighAccuracy: true,//是否使用高精度定位，默认:true
+            timeout: 10000,          //超过10秒后停止定位，默认：5s
+            buttonPosition:'RB',    //定位按钮的停靠位置
+            buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+            zoomToAccuracy: true,   //定位成功后是否自动调整地图视野到定位点
+
+        });
+        map.addControl(geolocation);
+        geolocation.getCurrentPosition(function(status,result){
+            if(status=='complete'){
+                onComplete(result)
+            }else{
+                onError(result)
+            }
+        });
+    });
+    //解析定位结果
+    function onComplete(data) {
+
+        document.getElementById("lnglat").value=data.position;
+    }
+    //解析定位错误信息
+    function onError(data) {
+        document.getElementById('status').innerHTML='定位失败'
+        document.getElementById('result').innerHTML = '失败原因排查信息:'+data.message;
+    }
+
+
+</script>
+<!-- jQuery Min JS -->
+<script src="../../assets/js/jquery.min.js"></script>
+<!-- Popper Min JS -->
+<script src="../../assets/js/popper.min.js"></script>
+<!-- Bootstrap Min JS -->
+<script src="../../assets/js/bootstrap.min.js"></script>
+<!-- Owl Carousel Min JS -->
+<script src="../../assets/js/owl.carousel.min.js"></script>
+<!-- MeanMenu JS -->
+<script src="../../assets/js/jquery.meanmenu.js"></script>
+<!-- Popup JS -->
+<script src="../../assets/js/jquery.magnific-popup.min.js"></script>
+<!-- Appear JS -->
+<script src="../../assets/js/jquery.appear.min.js"></script>
+<!-- Odometer JS -->
+<script src="../../assets/js/odometer.min.js"></script>
+<!-- Image LightBox Min JS -->
+<script src="../../assets/js/imagelightbox.min.js"></script>
+<!-- Nice Selects Min JS -->
+<script src="../../assets/js/jquery.nice-select.min.js"></script>
+<!-- AjaxChimp Min JS -->
+<script src="../../assets/js/jquery.ajaxchimp.min.js"></script>
+<!-- Form Validator Min JS -->
+<script src="../../assets/js/form-validator.min.js"></script>
+<!-- Contact Form Min JS -->
+<script src="../../assets/js/contact-form-script.js"></script>
+<script src="../../assets/js/readtxt.js"></script>
+<!-- Main JS -->
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

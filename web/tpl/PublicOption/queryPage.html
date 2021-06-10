@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-touch-fullsreen" content="YES">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>Rank</title>
+    <link rel="Shortcut Icon" href="../../static/image/TeaSafeLogo.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/option.css">
+</head>
+
+
+<body>
+<div class="ui fixed inverted menu">
+    <div class="ui container">
+        <a href="/backToHome" class="header item">
+            <img class="logo" src="../../static/image/login-logo.png">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+        </a>
+    </div>
+</div>
+<div class="headholder"></div>
+<div class="pusher">
+    <div class="ui vertical stripe segment">
+        <div class="ui middle aligned center aligned grid">
+            <div class="column">
+                <h5 class="ui teal image header">
+                    <img class="ui massive image" src="../../static/image/login-logo.png" alt="">
+                    <h3>请输入ID</h3>
+                </h5>
+                <form action="/findDataByID">
+                    <div class="ui icon input">
+                        <input name="id" type="text" placeholder="搜索ID...">
+                        <button class="ui icon button">
+                            <i class="search icon"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="../../static/js/jquery.min.js"></script>
+<script src="../../static/js/semantic.min.js"></script>
+<script>
+    $(document)
+        .ready(function () {
+
+            // fix menu when passed
+            $('.masthead')
+                .visibility({
+                    once: false,
+                    onBottomPassed: function () {
+                        $('.fixed.menu').transition('fade in');
+                    },
+                    onBottomPassedReverse: function () {
+                        $('.fixed.menu').transition('fade out');
+                    }
+                })
+            ;
+
+            // create sidebar and attach to menu open
+            $('.ui.sidebar')
+                .sidebar('attach events', '.toc.item')
+            ;
+
+        })
+    ;
+</script>
+</body>
+
+</html>
