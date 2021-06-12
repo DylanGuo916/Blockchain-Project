@@ -65,6 +65,8 @@ func CheckLogin(r *http.Request) *struct {
 	Action       []*model.Action
 	Data          service.Company
 	CodePath  string
+	Score float64
+	Rank string
 } {
 
 	fmt.Println("---------------------------------------------")
@@ -84,6 +86,8 @@ func CheckLogin(r *http.Request) *struct {
 		Action       []*model.Action
 		Data          service.Company
 		CodePath  string
+		Score float64
+		Rank string
 	}{
 		Sess:         nil,
 		FailedLogin:  false,

@@ -46,7 +46,7 @@ func (app *Application) Register(w http.ResponseWriter, r *http.Request) {
 	username := r.FormValue("loginName")
 	Password := r.FormValue("password")
 	phone := r.FormValue("tel")
-	role := "用户"
+	role := "员工"
 	statue := "正常"
 
 	if username == "" || Password == "" || phone == "" {

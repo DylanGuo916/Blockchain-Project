@@ -32,8 +32,8 @@ func (s *CompanyChaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response 
 	fn, args := stub.GetFunctionAndParameters()
 
 	//调用对应函数
-	if fn == "saveInfo" {
-		return s.saveInfo(stub, args)
+	if fn == "saveData" {
+		return s.saveData(stub, args)
 
 	} else if fn == "queryInfoById" {
 		return s.queryInfoById(stub, args)

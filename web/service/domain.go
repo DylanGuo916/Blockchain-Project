@@ -17,7 +17,7 @@ type Company struct {
 
 	Date string `json:"date"`
 
-	Score string `json:"score"` //得分
+	Score []float64 `json:"score"` //得分
 
 	Rank     string    `json:"rank"`     //信用等级
 }

@@ -41,7 +41,6 @@ func (t *ServiceSetup) SaveData(c Company) (string, error) {
 // 修改 Data 信息
 func (t *ServiceSetup) ModifyData(DataID, nextOwner string) (string, error) {
 
-
 	req := channel.Request{ChaincodeID: t.ChaincodeId, Fcn: "DataExchange", Args: [][]byte{[]byte(DataID), []byte(nextOwner)}}
 	respone, err := t.ChannelClient.Execute(req)
 

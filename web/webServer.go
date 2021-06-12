@@ -14,7 +14,7 @@ func WebStart(app *controller.Application)  {
 	http.Handle("/assets/", http.StripPrefix("/assets/", fs))
 
 	// 打开系统进入的页面
-	http.HandleFunc("/", app.LoginView)
+	http.HandleFunc("/", app.Home)
 
 	http.HandleFunc("/backToHome", app.BackToHome)			// 返回首页
 	http.HandleFunc("/registerPage", app.RegisterPage)
